@@ -1,12 +1,8 @@
 // import the data from data.js
-const tabledata = data;
+const tableData = data;
 
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
-
-function doubleAddition(c, d) {
-    var total = addition(c, d) * 2;
-    return total;
 
     function buildTable(data) {
         // First, clear out any existing data
@@ -28,7 +24,7 @@ function doubleAddition(c, d) {
         });
       }
 
-      function handleClick() {
+    function handleClick() {
         // Grab the datetime value from the filter
         let date = d3.select("#datetime").property("value");
         let filteredData = tableData;
@@ -48,7 +44,7 @@ function doubleAddition(c, d) {
       }
       
       // Attach an event to listen for the form button
-      d3.selectAll("#filter-btn").on("click", handleClick);
+        d3.selectAll("#filter-btn").on("click", handleClick);
       
       // Build the table when the page loads
-      buildTable(tableData);
+        buildTable(tableData);
